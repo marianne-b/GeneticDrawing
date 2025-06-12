@@ -1,4 +1,5 @@
 GeneticDrawing
+
 Algorithmes génétiques pour la création de peintures à partir de portraits
 
 Description : Une "peinture" est définie ici comme une superposition de "coups de pinceau", chacun caractérisé par une position donnée, une direction, une couleur, une opacité et une taille. Le problème à résoudre peut être formulé ainsi : Étant donné une image de référence, un canevas de dimensions fixes et un nombre limité de coups de pinceau, comment les agencer pour produire une peinture ressemblant à l’image de référence ? Ce sujet s’inscrit dans la continuité des travaux d’Anastasia Opara (voir un exemple ici : https ://github.com/anopara/genetic-drawing), qui a développé une approche basée sur des algorithmes génétiques pour générer des peintures en noir et blanc. Les objectifs de cette étude sont les suivants :
