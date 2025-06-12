@@ -1,0 +1,27 @@
+Pour lier GitHub ↔ ordinateur : il faut cloner le dépôt
+
+Étapes pour cloner le dépôt GitHub
+Copier l'URL du dépôt
+https://github.com/marianne-b/GeneticDrawing
+
+Ouvrir le terminal
+
+Tape cette commande (dans le dossier où cloner le projet) :
+
+git clone https://github.com/marianne-b/GeneticDrawing.git
+
+Aller dans le dossier cloné :
+
+cd GeneticDrawing
+
+Il y a maintenant une copie locale du projet. 
+
+Ajouter des fichiers (rapport/, main.tex, etc.)
+
+Compiler localement
+
+Puis faire un :
+
+git add .
+git commit -m "Ajout du rapport LaTeX"
+git push origin main
