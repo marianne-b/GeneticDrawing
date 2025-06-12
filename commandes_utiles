@@ -25,3 +25,8 @@ Puis faire un :
 git add .
 git commit -m "Ajout du rapport LaTeX"
 git push origin main
+
+
+
+cd C:\Users\maria\COURS\L2\IN013\GeneticDrawing\rapport
+pdflatex main.tex
