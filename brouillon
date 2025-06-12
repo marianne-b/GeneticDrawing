@@ -1,0 +1,186 @@
+ Médium
+- ⁠Git
+- ⁠Google Colab : on copie le lien du git et on le colle sur le Notebook pour le cloner
+- ⁠DEAP : algorithmes évolutionnaires (demander à ChatGPT de nous expliquer)
+
+
+3 rôles :
+- compréhension des algorithmes génétiques 
+- ⁠traitement d’images (afficher une image ou des brushs)
+- ⁠un peu les deux : passer d’un ensemble de brushs (la liste) à une image
+Faire le passage en GIF pour voir les étapes
+
+
+https://shahriyarshahrabi.medium.com/procedural-paintings-with-genetic-evolution-algorithm-6838a6e64703
+
+
+medium
+git clone
+git colab
+
+algorithmes
+optimisation
+divide and conquer
+descente de gradient -> donne la dérivée dans le sens contraire
+DEAP boîte noire
+algorithmes évolutionnaires -> fonction donne un score
+il faut trouver le score
+génotype brush : position, distance, la forme des gènes
+phénotype : images qu’elles affichent
+
+Pers 1 : encoder dans un vecteur les brushs qui donnent une image
+Pers 2 : traitement d’image
+image->matrice
+Python ‘PIL’
+Pers 3 : un peu des deux
+
+calculer la loss (comparer pixel par pixel)
+
+Compréhension de l’algorithme génétique
+traitement d’une image
+ensemble de brushs -> image  GIF
+
+informations sur un coup de brush : [5, 13, 23, 10, …] (taille, couleur, opacité) -> liste à transformer en image
+
+jouer avec l’angle du gradient des pixels
+
+scikit -Image
+pip install
+
+
+diversification -> Aléa/ taille de la population
+intensification -> croisement /seuil
+
+hyperparameter tuning for genetic algorithm
+hypereuristique
+
+plot la fitness en fonction des générations
+
+si ca bouge, converge vite : ca se diversifie pas assez
+
+Novelty search
+(fitness, novelty)
+
+cf robotique labyrinthe garder les genes innovants calculer les distances aux autres images cf medium
+
+NSGA2 alg genetique
+sélectionner le front de pareto 
+
+Visual.py
+ensemble de brushs -> image
+ensemble d’image -> gif
+class Brush
+  doit avoir une représentation en np.array  [1, 3, 30…]
+                                                                      (brush 1, taille 3, etc)
+fitness-> plus c’est petit mieux c’est (aussi utilisable pour la novelty -> plus c’est grand mieux c’est)
+: ensemble de brush + image de ref + distance
+
+matrice    matrice
+
+pour la novelty : faire un arbre
+organiser les phénotypes en arbre (voir k_means) (quadtree)
+
+
+
+solver.py
+librairie basée Neat
+crée la population /évaluer
+affiche le meilleur élément à côté de l’image d’origine     afficher a chaque etape
+prendre 4 éléments très éloignés et les afficher
+selectionner
+croiser   croisement polynomial  croisements implémenter sur neat
+muter
+
+
+distribution devient multinomiale
+
+
+rmrq : générer un angle au hasard : pas au hasard, on peut calculer le gradient des pixels et tirer une variation seulement
+
+filtre de Sobel
+ —
+
+Utiliser Unity pour faire les brushs ?
+avoir beaucoup de brush ? 
+
+
+sampling mask generated on edges
+
+difference evolution /genetique
+
+ACM
+design patterns matcher un standard
+pattern builder -> classes renvoient self a chaque fois 
+
+c'est le painting qui scale [-1,1]
+
+
+!git clone  httpsgithub…
+algorithme 
+  évolutionnaire : genome figé
+  génétique  :  regression symbolique
+fonction et parametres pas fixés
+ajouter des primitives
+ alg construit un genre d’arborescence avec des operations et des arguments
+
+flatten/unflatten -> plus sophistiqué avec des arbres
+
+
+
+personne 1 : centres d’interets, filtres etc
+personne 2 : les solver, reflechir a des primitives
+nombre de brushs pas forcément fixes
+
+collection de brushs ou les refaire a quoi fois..?
+
+mutate créer de nouvelles brushs  -> prefabs de brushs
+crossover utilise ceux existants  -> faconne, brushs reels
+
+select  -> prefabs et brushs
+
+brush.py
+painting.py
+mask (appliquer mask au painting)
+solver.py  -> un genetique evolution pas seulement dans le contenu mais aussi dans la forme etc
+     -> un purement evolutionnaire
+
+
+primitives : ajouter une brush aléatoire
+rotate, changer la couleur
+
+ajouter des options sur une brush très simple
+
+brushs changent de position et de forme, de complexité
+
+chaque brush en fonction de ses voisins k means
+réseau de neurones
+
+génétique
+image
+évolutionnaire
+
+cloner et travailler sur github
+
+prendre des brushs tres grandes pour gagner du temps
+filtre pour gagner du temps sur le backround
+
+appliquer un masque au niveau du crossover
+
+
+plus tard :  textures
+—
+montrer lutilité du masque
+
+peut etre au debut si on a pas de masque (moins beau a l’arrivee
+au debut ; on fixe le nombre de brushs (la moitié du nombre de pixels)
+et initialiser leurs positions
+
+
+black box optimization
+
+
+diapos
+compte rendu en Latex environ 10 pages
+ -introduction au contexte, aux problèmes étudiés, vue d’ensemble du travail effectué (éventuellement par catégories : conception/analyse d’algorithmes, implantation, etc)
+- une section doit décrire succinctement le travail de conception et/ou d’analyse d’algorithmes
+-une section dédiée au travail d’implantation en indiquant les choix techniques effectués et leurs motivations
